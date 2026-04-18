@@ -7,6 +7,10 @@
     "verification": "https://youtu.be/Bv67w88oNNg",
     "percentToQualify": 77,
     "password": "Free To Copy",
-    "records":
+    "records": [
+        {
+            "user": "No victors yet",
+            "link": "https://www.youtube.com/watch?v=xMHJGd3wwZk",
+            "percent": 100,
+            "hz": 67
         }
-
