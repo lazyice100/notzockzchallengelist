@@ -1,10 +1,18 @@
 {
     "id": "138500098",
     "name": "Lazyice's NZ-Challenge",
-    "author": "Lazyice1",
-    "creators": "Lazyice1",
-    "verifier": "NotZockzr",
-    "verification": "https://www.twitch.tv/notzockz/clip/PeppySecretiveAlmondPeanutButterJellyTime-mLa1ly3lhxcJLPfr",
-    "percentToQualify": "100",
-    "password": "Free To Copy"
+    "author": "lazyice1",
+    "creators": ["lazyice1"],
+    "verifier": "NotZockz",
+    "verification": "",
+    "percentToQualify": 56,
+    "password": "Not Copyable",
+    "records": [
+        {
+            "user": "There isnt a victor yet lol",
+            "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "percent": 100,
+            "hz": 480
+        }
+    ]
 }
