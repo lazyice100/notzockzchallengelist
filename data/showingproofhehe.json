@@ -1,0 +1,18 @@
+{
+    "id": "138515727",
+    "name": "proof",
+    "author": "hpoison3",
+    "creators": ["hposion3"],
+    "verifier": "hposion3",
+    "verification": "https://youtu.be/nRSNtfBQmOc",
+    "percentToQualify": 54,
+    "password": "none"
+    "records": [
+        {
+            "user": "No victors yet",
+            "link": "https://www.youtube.com/",
+            "percent": 67,
+            "hz": 67
+        }
+    ]
+}
