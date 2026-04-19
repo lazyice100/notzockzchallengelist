@@ -9,10 +9,10 @@
     "password": "none"
     "records": [
         {
-            "user": "No victors yet",
-            "link": "https://www.youtube.com/",
-            "percent": 67,
-            "hz": 67
+            "user": "no victors yet",
+            "link": "https://www.youtube.com",
+            "percent": 100,
+            "hz": 360
         }
     ]
 }
