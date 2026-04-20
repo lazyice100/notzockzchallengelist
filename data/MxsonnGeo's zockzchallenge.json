@@ -8,6 +8,11 @@
     "percentToQualify": 54,
     "password": "Free to Copy",
     "records": [
-
+           {
+            "user": "Z3NnEx",
+            "link": "https://www.youtube.com/watch?v=mhEq3F3e2Lo",
+            "percent": 100,
+            "hz": 480
+          }
     ]
 }
