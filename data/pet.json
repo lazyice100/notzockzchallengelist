@@ -8,6 +8,12 @@
     "percentToQualify": 33,
     "password": "Free to Copy",
     "records": [
+        {
+            "user": "Denni Fan",
+            "link": "https://www.youtube.com/watch?v=UGi5jHX39lM",
+            "percent": 100,
+            "hz": 480
+          }
         
     ]
 }
