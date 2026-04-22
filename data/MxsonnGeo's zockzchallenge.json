@@ -13,6 +13,18 @@
             "link": "https://www.youtube.com/watch?v=mhEq3F3e2Lo",
             "percent": 100,
             "hz": 480
+          },
+          {
+            "user": "Kaelobers",
+            "link": "https://www.youtube.com/watch?v=0NRr_g9tADs",
+            "percent": 100,
+            "hz": 240
+          },
+          {
+            "user": "Denni Fan",
+            "link": "https://www.youtube.com/watch?v=InLlMm-ib1M",
+            "percent": 100,
+            "hz": 480
           }
     ]
 }

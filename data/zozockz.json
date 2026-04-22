@@ -8,6 +8,17 @@
     "percentToQualify": 85,
     "password": "none",
     "records": [
-
+        {
+            "user": "Denni Fan",
+            "link": "https://www.youtube.com/watch?v=XU8rEM7K_nQ",
+            "percent": 100,
+            "hz": 480
+          },
+          {
+            "user": "3spyrt_3",
+            "link": "https://www.youtube.com/watch?v=doKoiYntbbA",
+            "percent": 100,
+            "hz": 240
+          }
     ]
 }

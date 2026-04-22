@@ -43,6 +43,12 @@
             "link": "https://www.youtube.com/watch?v=4U0jANd0OjA",
             "percent": 100,
             "hz": 240
-             }
+             },
+             {
+                "user": "Kaelobers",
+                "link": "https://www.youtube.com/watch?v=esULM0JuBjU",
+                "percent": 100,
+                "hz": 240
+              }
     ]
 }
