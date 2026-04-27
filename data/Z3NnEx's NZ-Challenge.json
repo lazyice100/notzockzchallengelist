@@ -19,6 +19,12 @@
             "link": "https://www.youtube.com/watch?v=pqxU3aUXKrg",
             "percent": 100,
             "hz": 480
-          }
+          },
+                       {
+            "user": "[qwerfjoik",
+            "link": "https://www.youtube.com/watch?v=dAt6S4slgYM",
+            "percent": 100,
+            "hz": 120
+             }
     ]
 }

@@ -55,6 +55,18 @@
             "link": "https://www.youtube.com/watch?v=9DJHotdNxOI",
             "percent": 100,
             "hz": 120
-             }
+             },
+             {
+            "user": "[qwerfjoik",
+            "link": "https://www.youtube.com/watch?v=gXhZnIElZns",
+            "percent": 100,
+            "hz": 120
+             },
+                       {
+            "user": "patrek_m",
+            "link": "https://www.youtube.com/watch?v=baSR2h2v17Q",
+            "percent": 100,
+            "hz": 60
+          }
     ]
 }

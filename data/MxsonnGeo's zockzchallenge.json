@@ -25,6 +25,19 @@
             "link": "https://www.youtube.com/watch?v=InLlMm-ib1M",
             "percent": 100,
             "hz": 480
+          },
+          {
+            "user": "patrek_m",
+            "link": "https://www.youtube.com/watch?v=1jHMkmCQ3C0",
+            "percent": 100,
+            "hz": 60
+          },
+                    {
+            "user": "3spyrt_3",
+            "link": "https://www.youtube.com/watch?v=6vtZNssoKBM",
+            "percent": 100,
+            "hz": 240
           }
+
     ]
 }
