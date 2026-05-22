@@ -12,6 +12,7 @@ export default {
         loading: true,
         selected: 0,
         err: [],
+        searchQuery: '',
     }),
     template: `
         <main v-if="loading">
@@ -25,10 +26,16 @@ export default {
                     </p>
                 </div>
                 <div class="board-container">
+                    <input 
+                        v-model="searchQuery" 
+                        type="text" 
+                        placeholder="Search by player name..." 
+                        class="search-input"
+                    />
                     <table class="board">
-                        <tr v-for="(ientry, i) in leaderboard">
-                            <td class="rank">
-                                <p class="type-label-lg">#{{ i + 1 }}</p>
+                        <tr v-for="(ientry, i) in filteredLeaderboard">
+                            <td class="rank">entry.actualIdx }">
+                                <button @click="selected = ientry.actualIdx i + 1 }}</p>
                             </td>
                             <td class="total">
                                 <p class="type-label-lg">{{ localize(ientry.total) }}</p>
@@ -87,6 +94,26 @@ export default {
                                 </td>
                             </tr>
                         </table>
+        filteredLeaderboard() {
+            if (!this.searchQuery.trim()) {
+                return this.leaderboard.map((entry, idx) => ({
+                    ...entry,
+                    actualIdx: idx,
+                }));
+            }
+            const query = this.searchQuery.toLowerCase();
+            const filtered = [];
+            for (let i = 0; i < this.leaderboard.length; i++) {
+                const entry = this.leaderboard[i];
+                if (entry.user.toLowerCase().includes(query)) {
+                    filtered.push({
+                        ...entry,
+                        actualIdx: i,
+                    });
+                }
+            }
+            return filtered;
+        },
                     </div>
                 </div>
             </div>

@@ -30,6 +30,29 @@
 .page-leaderboard .board-container {
     padding-inline: 1rem;
 }
+.page-leaderboard .board-container .search-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--color-background-hover);
+    border-radius: 0.5rem;
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: border-color 0.3s ease;
+}
+
+.page-leaderboard .board-container .search-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.page-leaderboard .board-container .search-input::placeholder {
+    color: var(--color-on-background-hover);
+}
 .page-leaderboard .board {
     table-layout: auto;
     display: block;
