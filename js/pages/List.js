@@ -99,8 +99,8 @@ export default {
                         <ol class="editors">
                             <li v-for="editor in editors">
                                 <img :src="\`/assets/\${roleIconMap[editor.role]}\${store.dark ? '-dark' : ''}.svg\`" :alt="editor.role">
-                                <a v-if="editor.link" class="type-label-lg link editor-name" target="_blank" :href="editor.link" :style="{ backgroundImage: editor.gradient }">{{ editor.name }}</a>
-                                <p v-else class="editor-name" :style="{ backgroundImage: editor.gradient }">{{ editor.name }}</p>
+                                <a v-if="editor.link" class="type-label-lg link" target="_blank" :href="editor.link">{{ editor.name }}</a>
+                                <p v-else>{{ editor.name }}</p>
                             </li>
                         </ol>
                     </template>

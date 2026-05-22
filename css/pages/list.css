@@ -136,8 +136,9 @@
     border-radius: 0.5rem;
     background-color: var(--color-background);
     color: var(--color-on-background);
-    font-family: inherit;
+    font-family: "Lexend Deca", sans-serif;
     font-size: 1rem;
+    font-weight: 500;
     transition: border-color 0.3s ease;
 }
 
@@ -149,36 +150,4 @@
 
 .page-list .list-container .search-input::placeholder {
     color: var(--color-on-background-hover);
-}
-
-/* Gradient Text for Editor Names */
-.page-list .meta .editors li .editor-name {
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% auto;
-    animation: gradientShift 3s ease infinite;
-    font-weight: 700;
-}
-
-.page-list .meta .editors li a.editor-name {
-    text-decoration: none;
-}
-
-.page-list .meta .editors li a.editor-name:hover {
-    text-decoration: underline;
-    -webkit-text-fill-color: auto;
-    background-clip: unset;
-}
-
-@keyframes gradientShift {
-    0% {
-        background-position: 0% center;
-    }
-    50% {
-        background-position: 100% center;
-    }
-    100% {
-        background-position: 0% center;
-    }
 }
