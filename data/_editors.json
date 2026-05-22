@@ -2,11 +2,13 @@
     {
         "role": "owner",
         "name": "lazyice",
-        "link": "https://www.youtube.com/@lazyicee"
+        "link": "https://www.youtube.com/@lazyicee",
+        "gradient": "linear-gradient(90deg, #FF6B9D, #C44569)"
     },
     {
         "role": "admin",
         "name": "Mxsonn",
-        "link": "https://www.youtube.com/@mxsonnplays"
+        "link": "https://www.youtube.com/@mxsonnplays",
+        "gradient": "linear-gradient(90deg, #667eea, #764ba2)"
     }
 ]

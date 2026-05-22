@@ -22,15 +22,21 @@ export default {
         </main>
         <main v-else class="page-list">
             <div class="list-container">
+                <input 
+                    v-model="searchQuery" 
+                    type="text" 
+                    placeholder="Search by level name..." 
+                    class="search-input"
+                />
                 <table class="list" v-if="list">
-                    <tr v-for="([level, err], i) in list">
+                    <tr v-for="(item, filterIdx) in filteredList">
                         <td class="rank">
-                            <p v-if="i + 1 <= 150" class="type-label-lg">#{{ i + 1 }}</p>
+                            <p v-if="item.actualIdx + 1 <= 150" class="type-label-lg">#{{ item.actualIdx + 1 }}</p>
                             <p v-else class="type-label-lg">Legacy</p>
                         </td>
-                        <td class="level" :class="{ 'active': selected == i, 'error': !level }">
-                            <button @click="selected = i">
-                                <span class="type-label-lg">{{ level?.name || \`Error (\${err}.json)\` }}</span>
+                        <td class="level" :class="{ 'active': selected == item.actualIdx, 'error': !item.level }">
+                            <button @click="selected = item.actualIdx">
+                                <span class="type-label-lg">{{ item.level?.name || \`Error (\${item.err}.json)\` }}</span>
                             </button>
                         </td>
                     </tr>
@@ -93,8 +99,8 @@ export default {
                         <ol class="editors">
                             <li v-for="editor in editors">
                                 <img :src="\`/assets/\${roleIconMap[editor.role]}\${store.dark ? '-dark' : ''}.svg\`" :alt="editor.role">
-                                <a v-if="editor.link" class="type-label-lg link" target="_blank" :href="editor.link">{{ editor.name }}</a>
-                                <p v-else>{{ editor.name }}</p>
+                                <a v-if="editor.link" class="type-label-lg link editor-name" target="_blank" :href="editor.link" :style="{ backgroundImage: editor.gradient }">{{ editor.name }}</a>
+                                <p v-else class="editor-name" :style="{ backgroundImage: editor.gradient }">{{ editor.name }}</p>
                             </li>
                         </ol>
                     </template>
@@ -133,10 +139,33 @@ export default {
         loading: true,
         selected: 0,
         errors: [],
+        searchQuery: '',
         roleIconMap,
         store
     }),
     computed: {
+        filteredList() {
+            if (!this.searchQuery.trim()) {
+                return this.list.map(([level, err], idx) => ({
+                    level,
+                    err,
+                    actualIdx: idx,
+                }));
+            }
+            const query = this.searchQuery.toLowerCase();
+            const filtered = [];
+            for (let i = 0; i < this.list.length; i++) {
+                const [level, err] = this.list[i];
+                if (!level || level.name.toLowerCase().includes(query)) {
+                    filtered.push({
+                        level,
+                        err,
+                        actualIdx: i,
+                    });
+                }
+            }
+            return filtered;
+        },
         level() {
             return this.list[this.selected][0];
         },
