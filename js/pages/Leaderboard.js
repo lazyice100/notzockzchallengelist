@@ -26,35 +26,36 @@ export default {
                     </p>
                 </div>
                 <div class="board-container">
-                    <input 
-                        v-model="searchQuery" 
-                        type="text" 
-                        placeholder="Search by player name..." 
+                    <input
+                        v-model="searchQuery"
+                        type="text"
+                        placeholder="Search by player name..."
                         class="search-input"
                     />
                     <table class="board">
-                        <tr v-for="(ientry, i) in filteredLeaderboard">
-                            <td class="rank">entry.actualIdx }">
-                                <button @click="selected = ientry.actualIdx i + 1 }}</p>
+                        <tr v-for="(ientry, i) in filteredLeaderboard" :key="ientry.user">
+                            <td class="rank">
+                                <p class="type-label-lg">#{{ ientry.actualIdx + 1 }}</p>
                             </td>
                             <td class="total">
                                 <p class="type-label-lg">{{ localize(ientry.total) }}</p>
                             </td>
-                            <td class="user" :class="{ 'active': selected == i }">
-                                <button @click="selected = i">
+                            <td class="user" :class="{ 'active': selected === ientry.actualIdx }">
+                                <button @click="selected = ientry.actualIdx">
                                     <span class="type-label-lg">{{ ientry.user }}</span>
                                 </button>
                             </td>
                         </tr>
                     </table>
+                    <p v-if="filteredLeaderboard.length === 0" class="type-label-md">No players found.</p>
                 </div>
                 <div class="player-container">
-                    <div class="player">
+                    <div class="player" v-if="entry">
                         <h1>#{{ selected + 1 }} {{ entry.user }}</h1>
                         <h3>{{ entry.total }}</h3>
-                        <h2 v-if="entry.verified.length > 0">Verified ({{ entry.verified.length}})</h2>
-                        <table class="table">
-                            <tr v-for="score in entry.verified">
+                        <h2 v-if="entry.verified.length > 0">Verified ({{ entry.verified.length }})</h2>
+                        <table class="table" v-if="entry.verified.length > 0">
+                            <tr v-for="score in entry.verified" :key="score.rank + score.level">
                                 <td class="rank">
                                     <p>#{{ score.rank }}</p>
                                 </td>
@@ -67,8 +68,8 @@ export default {
                             </tr>
                         </table>
                         <h2 v-if="entry.completed.length > 0">Completed ({{ entry.completed.length }})</h2>
-                        <table class="table">
-                            <tr v-for="score in entry.completed">
+                        <table class="table" v-if="entry.completed.length > 0">
+                            <tr v-for="score in entry.completed" :key="score.rank + score.level">
                                 <td class="rank">
                                     <p>#{{ score.rank }}</p>
                                 </td>
@@ -80,9 +81,9 @@ export default {
                                 </td>
                             </tr>
                         </table>
-                        <h2 v-if="entry.progressed.length > 0">Progressed ({{entry.progressed.length}})</h2>
-                        <table class="table">
-                            <tr v-for="score in entry.progressed">
+                        <h2 v-if="entry.progressed.length > 0">Progressed ({{ entry.progressed.length }})</h2>
+                        <table class="table" v-if="entry.progressed.length > 0">
+                            <tr v-for="score in entry.progressed" :key="score.rank + score.level">
                                 <td class="rank">
                                     <p>#{{ score.rank }}</p>
                                 </td>
@@ -94,6 +95,15 @@ export default {
                                 </td>
                             </tr>
                         </table>
+                    </div>
+                    <div class="player" v-else>
+                        <p class="type-label-md">No leaderboard entry selected.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    `,
+    computed: {
         filteredLeaderboard() {
             if (!this.searchQuery.trim()) {
                 return this.leaderboard.map((entry, idx) => ({
@@ -101,25 +111,12 @@ export default {
                     actualIdx: idx,
                 }));
             }
+
             const query = this.searchQuery.toLowerCase();
-            const filtered = [];
-            for (let i = 0; i < this.leaderboard.length; i++) {
-                const entry = this.leaderboard[i];
-                if (entry.user.toLowerCase().includes(query)) {
-                    filtered.push({
-                        ...entry,
-                        actualIdx: i,
-                    });
-                }
-            }
-            return filtered;
+            return this.leaderboard
+                .map((entry, idx) => ({ ...entry, actualIdx: idx }))
+                .filter((entry) => entry.user.toLowerCase().includes(query));
         },
-                    </div>
-                </div>
-            </div>
-        </main>
-    `,
-    computed: {
         entry() {
             return this.leaderboard[this.selected];
         },
@@ -128,7 +125,6 @@ export default {
         const [leaderboard, err] = await fetchLeaderboard();
         this.leaderboard = leaderboard;
         this.err = err;
-        // Hide loading spinner
         this.loading = false;
     },
     methods: {
