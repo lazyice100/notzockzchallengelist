@@ -8,6 +8,12 @@
     "percentToQualify": 43,
     "password": "Free to Copy",
     "records": [
+        {
+            "user": "3spyrt_3",
+            "link": "https://www.youtube.com/watch?v=F4VzZ5WKXXU",
+            "percent": 100,
+            "hz": 240
+          }
 
     ]
 }
