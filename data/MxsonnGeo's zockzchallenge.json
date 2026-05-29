@@ -43,7 +43,13 @@
             "link": "https://www.youtube.com/watch?v=NgySZOhMym4",
             "percent": 100,
             "hz": 240
-          }
+          },
+                            {
+            "user": "NotZockz",
+            "link": "https://youtu.be/nGH7XvWDfVA",
+            "percent": 100,
+            "hz": 240
+        }
 
     ]
 }

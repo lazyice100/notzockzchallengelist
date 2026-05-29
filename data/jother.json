@@ -19,7 +19,13 @@
             "link": "https://www.youtube.com/watch?v=apKIJzjLQA8",
             "percent": 100,
             "hz": 144
-      }
+      },
+              {
+            "user": "NotZockz",
+            "link": "https://youtu.be/U8zOLbqICG4",
+            "percent": 100,
+            "hz": 240
+        }
         
     ]
 }
