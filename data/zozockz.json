@@ -25,6 +25,12 @@
             "link": "https://www.youtube.com/watch?v=c66sLK2xgJM",
             "percent": 100,
             "hz": 120
-             }
+             },
+                       {
+            "user": "[TTG] hpoison3",
+            "link": "https://www.youtube.com/watch?v=NgySZOhMym4",
+            "percent": 100,
+            "hz": 240
+          }
     ]
 }
