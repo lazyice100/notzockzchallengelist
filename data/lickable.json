@@ -8,6 +8,12 @@
     "percentToQualify": 85,
     "password": "none",
     "records": [
+                                    {
+            "user": "[TTG] NotZockz",
+            "link": "https://www.twitch.tv/notzockz/clip/AwkwardSparklingChamoisTheTarFu--iux5TX7YhNf5QbB",
+            "percent": 100,
+            "hz": 240
+        }
         
     ]
 }
