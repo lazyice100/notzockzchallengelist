@@ -8,5 +8,11 @@
     "percentToQualify": 85,
     "password": "none",
     "records": [
+          {
+                "user": "[DGM] Denni fan",
+                "link": "https://youtu.be/aeMuWjTPQjk",
+                "percent": 100,
+                "hz": 240
+            }
     ]
 }
