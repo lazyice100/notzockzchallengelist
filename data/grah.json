@@ -3,16 +3,10 @@
     "name": "grah",
     "author": "mxsonngeo",
     "creators": ["mxsonngeo"],
-    "verifier": "[DGM] Denni fan",
-    "verification": "https://youtu.be/5Wb-ZSn_9Co",
+    "verifier": "[TTG] hpoison3",
+    "verification": "https://youtu.be/BP0sDvca_KU",
     "percentToQualify": 85,
     "password": "none",
     "records": [
-                {
-            "user": "[TTG] hpoison3",
-            "link": "https://youtu.be/BP0sDvca_KU",
-            "percent": 100,
-            "hz": 240
-      }
     ]
 }
