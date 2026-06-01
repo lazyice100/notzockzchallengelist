@@ -8,6 +8,12 @@
     "percentToQualify": 85,
     "password": "none",
     "records": [
+                {
+            "user": "[TTG] hpoison3",
+            "link": "https://www.youtube.com/watch?v=UbSvbqbPYlk",
+            "percent": 100,
+            "hz": 240
+        }
         
     ]
 }
