@@ -13,7 +13,19 @@
             "link": "https://www.youtube.com/watch?v=UbSvbqbPYlk",
             "percent": 100,
             "hz": 240
-        }
+        },
+                           {
+            "user": "[DGM] Z3NnEx",
+            "link": "https://www.youtube.com/watch?v=zCu0xMCxmNs",
+            "percent": 100,
+            "hz": 480
+          },
+                              {
+            "user": "3spyrt_3",
+            "link": "https://www.youtube.com/watch?v=L4D3tnPgq1E",
+            "percent": 100,
+            "hz": 240
+          }
         
     ]
 }
