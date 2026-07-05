@@ -1,4 +1,4 @@
-# NZCL
+# TTG Challenge list
 
 Lazyice made this site with the tsl template 
 
