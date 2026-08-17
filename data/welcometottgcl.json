@@ -8,5 +8,11 @@
     "percentToQualify": 67,
     "password": "Free to Copy",
     "records": [
+        {
+            "user": "DrChopper",
+            "link": "https://www.youtube.com/watch?v=akLkB6Fqd9A",
+            "percent": 100,
+            "hz": 240
+      }
     ]
 }
